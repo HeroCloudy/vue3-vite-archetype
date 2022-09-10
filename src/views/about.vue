@@ -15,8 +15,6 @@ import { storeToRefs } from 'pinia'
 const demoStore = useDemoStore()
 const { counter } = storeToRefs(demoStore)
 
-console.log('count: ', counter)
-
 const add = () => {
   demoStore.increment()
 }
