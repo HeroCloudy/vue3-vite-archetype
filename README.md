@@ -1,16 +1,52 @@
-# Vue 3 + TypeScript + Vite
+# {{projectName}}
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+{{description}}
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+### Frameworks
 
-## Type Support For `.vue` Imports in TS
+- Vue 3
+- Vite 2
+- TypeScript
+- TSX
+- Vue Router
+- Pinia
+- Element Plus
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+## Project setup
+```
+yarn
+```
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+### Compiles and hot-reloads for development
+```
+yarn dev
+```
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+### Compiles and minifies for production
+```
+yarn build
+```
+
+---
+Thanks for using yyg-cli. Development by 程序员优雅哥.
+
+If you have any questions, please contact me (heroyyg@126.com).
+
+---
+***程序员优雅哥***
+
+十年程序员，呆过央企外企私企，做过前端后端架构，分享vue、Java等前后端技术和架构
+
+在公众号上随时更新前后端技术文章及企业级实战项目。可关注公众号程序员优雅哥查看。
+
+与时间赛跑，每天都在进步！！
+
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h5anivz6cmj20ca0c6dgm.jpg" alt="程序员优雅哥" style="zoom:33%;" />
+
+yycoder
+
+
+
+
+
