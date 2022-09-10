@@ -42,7 +42,7 @@ If you have any questions, please contact me (heroyyg@126.com).
 
 与时间赛跑，每天都在进步！！
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h5anivz6cmj20ca0c6dgm.jpg" alt="程序员优雅哥" style="zoom:33%;" />
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h5anivz6cmj20ca0c6dgm.jpg" alt="程序员优雅哥" style="width: 200px;" />
 
 yycoder
 
