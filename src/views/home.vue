@@ -7,8 +7,11 @@
       <a href="https://vuejs.org/" target="_blank">
         <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo"/>
       </a>
+      <a href="https://pinia.web3doc.top/" target="_blank">
+        <img src="https://pinia.web3doc.top/logo.svg" class="logo pinia" alt="Pinia logo"/>
+      </a>
     </div>
-    <HelloWorld msg="Vite + Vue"/>
+    <HelloWorld msg="Vite + Vue + Pinia"/>
   </div>
 </template>
 
@@ -36,5 +39,9 @@ export default defineComponent({
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.logo.pinia:hover {
+  filter: drop-shadow(0 0 2em rgb(245, 208, 88));
 }
 </style>
