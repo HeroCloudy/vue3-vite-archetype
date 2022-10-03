@@ -5,12 +5,22 @@
     <el-button @click="add">
       <el-icon-plus></el-icon-plus>
     </el-button>
+
+<div>
+  <svg-icon icon="http://www.yygnb.com/demo/car.svg"></svg-icon>
+  <svg-icon icon="car"></svg-icon>
+
+  <svg-icon class-name="icon" icon="http://www.yygnb.com/demo/car.svg"></svg-icon>
+  <svg-icon class-name="icon" icon="car"></svg-icon>
+</div>
+
   </div>
 </template>
 
 <script lang="ts" setup>
 import useDemoStore from '@/store/demo'
 import { storeToRefs } from 'pinia'
+import SvgIcon from '@/components/svg-icon/index.vue'
 
 const demoStore = useDemoStore()
 const { counter } = storeToRefs(demoStore)
@@ -20,3 +30,9 @@ const add = () => {
 }
 
 </script>
+<style scoped>
+.icon {
+  color: cornflowerblue;
+  font-size: 30px;
+}
+</style>

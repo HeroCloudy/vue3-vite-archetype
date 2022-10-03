@@ -11,6 +11,7 @@
 - Vue Router
 - Pinia
 - Element Plus
+- SVG Icon
 
 ## Project setup
 ```
