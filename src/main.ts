@@ -19,4 +19,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(`el-icon${camelCaseToLine(key)}`, component)
 }
 
+const env = import.meta.env
+console.log(env)
+
 app.mount('#app')

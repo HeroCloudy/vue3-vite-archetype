@@ -27,5 +27,6 @@ export default defineConfig({
     port: 3000,
     cors: true,
     proxy: {}
-  }
+  },
+  envDir: path.resolve(__dirname, './env')
 })
