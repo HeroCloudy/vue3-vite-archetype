@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts" setup>
-import useDemoStore from '@/store/demo'
+import useDemoStore from '@/store/modules/demo'
 import { storeToRefs } from 'pinia'
 import SvgIcon from '@/components/svg-icon/index.vue'
 

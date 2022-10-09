@@ -16,12 +16,15 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.9",
     "element-plus": "^2.2.16",
+    "nprogress": "^0.2.0",
     "pinia": "^2.0.22",
+    "pinia-plugin-persistedstate": "^2.2.0",
     "vue": "^3.2.37",
     "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
+    "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-vue": "^3.1.0",

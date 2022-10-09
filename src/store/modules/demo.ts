@@ -12,6 +12,11 @@ const useDemoStore = defineStore('demo', () => {
     counter,
     increment
   }
+}, {
+  persist: {
+    key: 'aaa',
+    storage: sessionStorage
+  }
 })
 
 export default useDemoStore
