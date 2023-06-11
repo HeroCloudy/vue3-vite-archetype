@@ -1,26 +1,29 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
-import router from './router'
-import pinia from '@/store'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-import 'virtual:svg-icons-register'
-import { camelCaseToLine } from '@/utils/str-utils'
-import '@/router/guard/index'
+import { installElementPlus } from '@/plugins/element'
+import { installComponents } from '@/components'
+import router, { installRouter } from '@/router'
+import { installRouterGuards } from '@/router/guard'
+import { installStore } from '@/store'
+import { installAssets } from '@/plugins/assets'
 
-const app = createApp(App)
+const startApp = () => {
+  const app = createApp(App)
 
-app.use(router)
-app.use(pinia)
-app.use(ElementPlus)
+  // 静态资源
+  installAssets(app)
+  // 路由 VueRouter
+  installRouter(app)
+  // 路由守卫
+  installRouterGuards(router)
+  // 全局状态管理 Pinia
+  installStore(app)
+  // Element Plus
+  installElementPlus(app)
+  // 自定义组件库
+  installComponents(app)
 
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-  app.component(`el-icon${camelCaseToLine(key)}`, component)
+  app.mount('#app')
 }
 
-const env = import.meta.env
-console.log(env)
-
-app.mount('#app')
+startApp()

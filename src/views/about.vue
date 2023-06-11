@@ -7,11 +7,11 @@
     </el-button>
 
 <div>
-  <svg-icon icon="http://www.yygnb.com/demo/car.svg"></svg-icon>
-  <svg-icon icon="car"></svg-icon>
+  <yyg-svg-icon icon="http://www.yygnb.com/demo/car.svg"></yyg-svg-icon>
+  <yyg-svg-icon icon="car"></yyg-svg-icon>
 
-  <svg-icon class-name="icon" icon="http://www.yygnb.com/demo/car.svg"></svg-icon>
-  <svg-icon class-name="icon" icon="car"></svg-icon>
+  <yyg-svg-icon class-name="icon" icon="http://www.yygnb.com/demo/car.svg"></yyg-svg-icon>
+  <yyg-svg-icon class-name="icon" icon="car"></yyg-svg-icon>
 </div>
 
   </div>
@@ -20,7 +20,6 @@
 <script lang="ts" setup>
 import useDemoStore from '@/store/modules/demo'
 import { storeToRefs } from 'pinia'
-import SvgIcon from '@/components/svg-icon/index.vue'
 
 const demoStore = useDemoStore()
 const { counter } = storeToRefs(demoStore)
