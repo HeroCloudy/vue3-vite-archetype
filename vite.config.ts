@@ -5,6 +5,7 @@ import eslint from 'vite-plugin-eslint'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,7 +19,8 @@ export default defineConfig({
       iconDirs: [path.resolve(__dirname, 'src/svg')],
       // 执行 icon name 的格式
       symbolId: 'icon-[name]'
-    })
+    }),
+    UnoCSS()
   ],
   resolve: {
     alias: {

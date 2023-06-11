@@ -14,6 +14,10 @@ const count = ref(0)
     <p>
       Thanks for using yyg-cli !!
     </p>
+    <div class="color-red text-30px">测试使用 UnoCSS 1</div>
+    <div class="text-20px">测试使用 UnoCSS 2</div>
+    <div class="i-ic-baseline-21mp"></div>
+    <div class="i-ic-baseline-21mp color-blue text-50px"></div>
   </div>
   <p class="read-the-docs">by 程序员优雅哥</p>
 </template>
