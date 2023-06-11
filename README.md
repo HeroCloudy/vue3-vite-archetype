@@ -4,28 +4,45 @@
 
 ### Frameworks
 
-- Vue 3
-- Vite 2
-- TypeScript
+- Vue 3.x
+- Vite 4.x
+- TypeScript 4.x
 - TSX
 - Vue Router
 - Pinia
 - Element Plus
 - SVG Icon
+- Axios
+- ESLint Standard
 
 ## Project setup
 ```
-yarn
+pnpm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn dev
+# using .env.dev profile by default
+pnpm run dev
+pnpm run dev:dev
+
+# using .env.uat profile
+pnpm run dev:uat
+
+# using .env.prod profile
+pnpm run dev:prod
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+# using .env.dev profile
+pnpm run build:dev
+
+# using .env.uat profile
+pnpm run build:uat
+
+# using .env.prod profile
+pnpm run build:prod
 ```
 
 ---
