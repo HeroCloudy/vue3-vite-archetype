@@ -19,7 +19,7 @@
   </svg>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="svg-icon">
 import { computed } from 'vue'
 
 const props = defineProps({

@@ -1,3 +1,4 @@
+import { App } from 'vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/home.vue'
 
@@ -23,5 +24,9 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+
+export const installRouter = (app: App) => {
+  app.use(router)
+}
 
 export default router

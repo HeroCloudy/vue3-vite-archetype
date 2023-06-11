@@ -11,19 +11,15 @@
         <img src="https://pinia.web3doc.top/logo.svg" class="logo pinia" alt="Pinia logo"/>
       </a>
     </div>
-    <HelloWorld msg="Vite + Vue + Pinia"/>
+    <yyg-hello-world msg="Vite + Vue + Pinia"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default defineComponent({
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  name: 'home'
 })
 </script>
 <style scoped>
