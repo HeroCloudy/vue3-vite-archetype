@@ -5,8 +5,11 @@ import axios, {
   CreateAxiosDefaults,
   InternalAxiosRequestConfig
 } from 'axios'
+import { ElMessage } from 'element-plus'
 
-// Request 类，对 Axios 进行二次封装
+/**
+ * Request: 对 Axios 进行二次封装
+ */
 class Request {
   // Axios 的实例对象
   private axiosInstance: AxiosInstance | null = null
@@ -34,18 +37,51 @@ class Request {
     this.axiosInstance?.interceptors.response.use((response: AxiosResponse) => {
       return response
     }, err => {
+      if (err && err.response) {
+        if (err.response.status === 401) {
+          // TODO 无权限时的操作
+        }
+
+        if (err.response.data) {
+          const errData = err.response.data
+          ElMessage({
+            showClose: true,
+            message: `${errData.msg}(${errData.code})`,
+            type: 'error',
+            center: true
+          })
+        }
+      }
       return Promise.reject(err)
     })
   }
 
-  // get 请求
-  public get<T> (url: string, params: AxiosRequestConfig): Promise<T> {
+  /**
+   * get 请求
+   */
+  public get<T> (url: string, params?: AxiosRequestConfig): Promise<T> {
     return this.axiosInstance!.get(url, params).then(resp => resp.data).catch()
   }
 
-  // post 请求
-  public post<T> (url: string, params: AxiosRequestConfig): Promise<T> {
-    return this.axiosInstance!.post(url, params).then(resp => resp.data).catch()
+  /**
+   * post 请求
+   */
+  public post<T> (url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    return this.axiosInstance!.post(url, data, config).then(resp => resp.data).catch()
+  }
+
+  /**
+   * delete 请求
+   */
+  public remove<T> (url: string, params?: AxiosRequestConfig): Promise<T> {
+    return this.axiosInstance!.delete(url, params).then(resp => resp.data).catch()
+  }
+
+  /**
+   * put 请求
+   */
+  public put<T> (url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    return this.axiosInstance!.put(url, data, config)
   }
 }
 
