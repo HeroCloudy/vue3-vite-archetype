@@ -1,4 +1,4 @@
-import { defineConfig, presetUno, presetAttributify, presetIcons } from 'unocss'
+import { defineConfig, presetUno, presetAttributify, presetIcons, transformerDirectives } from 'unocss'
 
 export default defineConfig({
   rules: [
@@ -13,5 +13,8 @@ export default defineConfig({
         'vertical-align': 'middle'
       }
     })
+  ],
+  transformers: [
+    transformerDirectives()
   ]
 })
